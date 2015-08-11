@@ -1,4 +1,4 @@
-print "Enter a number:  "
+print "Fancy - Enter a number:  "
 number = gets.to_i
 counter = 1
 until counter > number
