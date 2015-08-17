@@ -1,0 +1,22 @@
+<h1>Faker:</h1>
+<form class="" action="/pick_winner" method="post">
+
+
+<br>
+  <div class="">
+    <label for "names"> Names: </label>
+    <textarea style ="width : 500px;" id="names" rows="8" name = "names" value=""><%= @names %></textarea>
+  </div>
+
+  <div class="">
+    <input type = "submit" value="Pick Winner">
+  </div>
+
+<!-- <% if @result %>
+  <%= "#{@result}" %>
+<% end %> -->
+<% if @result %>
+<div style="width: 500px;height:100px;background-color:red;"><%= @result %>
+</div>
+<% end %>
+</form>

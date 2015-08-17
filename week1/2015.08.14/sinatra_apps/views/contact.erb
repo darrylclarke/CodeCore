@@ -1,0 +1,44 @@
+
+<h1>Contact Us:</h1>
+<form class="" action="/submit_contact" method="post">
+  <!-- label tag's for item matches id of input field -->
+  <div>
+    <label class = "label-class" for="first-name">First Name</label>
+    <input type="text" id="first-name" value="" placeholder="First Name" name="full_name"> <!-- no closing tag -->
+  </div>
+  <div>
+    <label class = "label-class" for="last-name">Temperature</label>
+    <input type="text" id="last-name" value="" placeholder="Temperature" name="temperature">
+  </div>
+  <div class="">
+    <label class = "label-class" for="technical">Technical</label>
+    <input type="radio" name="department" id="technical" value="eew">
+    <label class = "label-class" for="marketing">Marketing</label>
+    <input type="radio" name="department" id="marketing" value="rr">
+    <label class = "label-class" for="sales">Sales (default)</label>
+    <input type="radio" name="department" id="sales" value="tt" checked="checked">
+  </div>
+  <div class="">
+    <input type="checkbox" id = "urgent" name="" value="">
+    <label class = "label-class" for="urgent">Urgent</label>
+  </div>
+  <div class="">
+    <label for="category">Category</label>
+    <select class="" id="category" name="">
+      <option>Art</option>
+      <option>Music</option>
+      <option>Technology</option>
+    </select>
+  </div>
+  <div class="">
+    <label for="email">Email</label>
+    <input type="email" id="email">
+  </div>
+  <div class="">
+    <label for "message"> Message </label>
+    <textarea id="message" rows="8"></textarea>
+  </div>
+  <div class="">
+    <input type = "submit"/>
+  </div>
+</form>

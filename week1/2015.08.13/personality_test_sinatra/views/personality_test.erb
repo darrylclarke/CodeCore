@@ -1,0 +1,86 @@
+<%
+def is_checked(value, reference)
+  if value.to_i == reference.to_i
+    "checked"
+  else
+    ""
+  end
+end
+ %>
+
+
+
+<h1>Personality Survey:</h1>
+
+<img src="/images/tesla.jpg" width="250"/>
+<br>
+<form class="" action="/personality_test" method="post">
+  <!-- label tag's for item matches id of input field -->
+  <div>
+    <label class = "label-class" for="first-name">First Name</label>
+    <input type="text" id="first_name" placeholder="First Name" name="first_name"
+           value="<%=first_name%>" >
+  </div>
+  <br>
+  <hr>
+  <br>
+  <%#
+  <!-- <% q1 ? 'q1 a checked' : 'q1 a not checked'% > -->
+  <!-- <% !q1 ? 'q1 b checked' : 'q1 b not checked'% > -->
+  <!-- <%= question_1 % > --> %>
+  <ol>
+      <!--  The first question -->
+    <li>You work best:
+      <div class="">
+        <input type="radio" name="work-best" id="deadlines" value="0"
+            <%= is_checked(question_1, 0) %> >
+         <label class = "label-class" for="deadlines">With deadlines</label>
+        <input type="radio" name="work-best" id="no-deadlines" value="1"
+        <%= is_checked(question_1, 1) %> >
+        <label class = "label-class" for="no-deadlines">Without deadlines</label>
+      </div>
+    </li>
+
+    <!-- checked="< %= q1_is_first_checked(question_1) ? "checked" : "" % >">
+    < %# checked="< %= !q1_is_first_checked(question_1) ? "checked" : "" % >"> % > -->
+
+      <!--  The second question -->
+    <li>You consider yourself more:
+      <div class="">
+        <input type="radio" name="consider-yourself" id="rational" value="0"
+        <%= is_checked(question_2, 0) %> >
+        <label class = "label-class" for="rational">Rational</label>
+        <input type="radio" name="consider-yourself" id="compassionate" value="1"
+        <%= is_checked(question_2, 1) %> >
+        <label class = "label-class" for="compassionate">Compassionate</label>
+      </div>
+    </li>
+
+
+      <!--  The third question -->
+    <li>You are more interested in:
+      <div class="">
+        <input type="radio" name="interested-in" id="ideas" value="0"
+        <%= is_checked(question_3, 0) %> >
+        <label class = "label-class" for="ideas">Ideas</label>
+        <input type="radio" name="interested-in" id="facts" value="1"
+        <%= is_checked(question_3, 1) %> >
+        <label class = "label-class" for="facts">Facts</label>
+      </div></li>
+  </ol>
+
+  <div class="">
+    <input type = "submit" value="Find my personality">
+  </div>
+
+</form>
+
+<% if first_name != nil %>
+<h1><%= "#{first_name}, #{@result}" %></h1>
+<br>
+<br>
+<hr>
+<br>
+<br>
+<%= "#{first_name} q1=#{question_1} q2=#{question_2} q3=#{question_3}" %>
+<% end %>

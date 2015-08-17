@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="test.css" />
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <h1>Contact Us:</h1>
+    <form class="" action="" method="post">
+      <!-- label tag's for item matches id of input field -->
+      <div>
+        <label class = "label-class" for="first-name">First Name</label>
+        <input type="text" id="first-name" value="" placeholder="First Name"> <!-- no closing tag -->
+      </div>
+      <div>
+        <label class = "label-class" for="last-name">Last Name</label>
+        <input type="text" id="last-name" value="" placeholder="Last Name">
+      </div>
+      <div class="">
+        <label class = "label-class" for="technical">Technical</label>
+        <input type="radio" name="department" id="technical" value="">
+        <label class = "label-class" for="marketing">Marketing</label>
+        <input type="radio" name="department" id="marketing" value="">
+        <label class = "label-class" for="sales">Sales (default)</label>
+        <input type="radio" name="department" id="sales" value="" checked="checked">
+      </div>
+      <div class="">
+        <input type="checkbox" id = "urgent" name="" value="">
+        <label class = "label-class" for="urgent">Urgent</label>
+      </div>
+      <div class="">
+        <label for="category">Category</label>
+        <select class="" id="category" name="">
+          <option>Art</option>
+          <option>Music</option>
+          <option>Technology</option>
+        </select>
+      </div>
+      <div class="">
+        <label for="email">Email</label>
+        <input type="email" id="email">
+      </div>
+      <div class="">
+        <label for "message"> Message </label>
+        <textarea id="message" rows="8"></textarea>
+      </div>
+      <div class="">
+        <input type = "submit"/>
+      </div>
+    </form>
+  </body>
+</html>

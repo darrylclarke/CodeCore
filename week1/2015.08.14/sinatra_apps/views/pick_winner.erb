@@ -1,0 +1,22 @@
+<h1>Pick a Winner:</h1>
+<form class="" action="/pick_winner" method="post">
+
+
+<br>
+  <div class="">
+    <label for "names"> Enter a list of names separated by commas:</label>
+    <textarea style ="width : 500px;" id="names" rows="8" name = "names" value=""><%= @names %></textarea>
+  </div>
+
+  <div class="">
+    <input type = "submit" value="Pick Winner">
+  </div>
+
+<!-- <% if @result %>
+  <%= "#{@result}" %>
+<% end %> -->
+<% if @result %>
+<div style="width: 500px;height:100px;background-color:red;"><%= @result %>
+</div>
+<% end %>
+</form>

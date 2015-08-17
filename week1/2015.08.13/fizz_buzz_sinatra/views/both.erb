@@ -1,0 +1,34 @@
+<h2>Enter some numbers and I'll give you a fizz buzz:</h2>
+<form class="" action="/both" method="post">
+  <!-- label tag's for item matches id of input field -->
+  <div>
+    <input
+      type="text"
+      id=""
+      value="<%= number_1 ? number_1 : '' %>"
+      placeholder="First Number"
+      name="first_number"
+      >
+  </div>
+  <div>
+    <input type="text" id="" value="<%= number_2 ? number_2 : '' %>" placeholder="Second Number" name="second_number">
+  </div>
+
+  <div>
+    <a href="/both">Start over...</a>
+  </div>
+
+  <div class="">
+    <input type = "submit"/>
+  </div>
+</form>
+
+<% if fb != nil %>
+<hr>
+<p>The data:</p>
+<%   fb.each do |line| %>
+<%=   "<p style='padding: 0px;'> #{line}  </p>" %>
+<%   end %>
+<hr>
+<a href="#">Top</a>
+<% end %>

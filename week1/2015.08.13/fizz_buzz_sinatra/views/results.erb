@@ -1,0 +1,12 @@
+<h1>Your Result:</h1>
+<p>Number 1:&nbsp;&nbsp;&nbsp;<%= number_1 %></p>
+<br>
+<p>Number 2:&nbsp;&nbsp;&nbsp;<%= number_2 %></p>
+<br>
+<a href = "/">Try Again?</a>
+<hr>
+<p>The data:</p>
+<% fb.each do |line| %>
+<%= "<p style='padding: 0px;'> #{line}  </p>" %>
+<% end %>
+<hr>

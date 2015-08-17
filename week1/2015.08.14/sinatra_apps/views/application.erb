@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="/css/bootstrap.css" />
+    <title>My first sinatra app</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="" >
+    <meta name="description" content="" >
+    <style>
+      body.bg1 {
+        background-color: <%= session[:background_colour] %>;
+      }
+      </style>
+  </head>
+  <body class="bg1">
+
+    <header>
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class = "container">
+          <div class = "navbar-header">
+            <a href="/">Home</a>
+            |
+            <a href="/contact">Contact Us</a>
+            |
+            <a href="/cookie">Cookies</a>
+            |
+            <a href="/personality_test">Personality Test</a>
+            |
+            <a href="/faker">Faker</a>
+            |
+            <a href="/pick_winner">Pick Winner</a>
+            |
+            <a href="/gmail-sender">Send email message</a>
+            |
+            <a href="/colour/blue">Blue</a>
+            |
+            <a href="/colour/green">Green</a>
+            |
+            <a href="/colour/yellow">Yellow</a>
+            |
+            <a href="/colour/normal">Normal</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <br>
+    <hr>
+    The last winner was:  <%= session[:the_last_winner] %>
+    <br>
+    You have visited the home page <%= session[:number_of_times_on_home_page] %> times
+    <hr>
+
+    <%= yield %>
+
+  </body>
+  </html>

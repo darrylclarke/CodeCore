@@ -1,0 +1,34 @@
+<h1>Send an email:</h1>
+<form class="" action="/gmail-sender" method="post">
+
+<div>
+  <label class = "label-class" for="email-address">Email Address:</label>
+  <input type="email" style ="width : 500px;" id="email-address" value="<%= @email %>" placeholder="Email Address" name="email">
+</div>
+
+<div>
+  <label class = "label-class" for="password">Password:</label>
+  <input type="password" style ="width : 500px;" id="password" value="<%= session[:password] %>" placeholder="" name="password">
+</div>
+
+<div class="">
+  <label for "subject">Subject:</label>
+  <textarea style ="width : 500px;" id="subject" rows="2" name = "subject" value=""> </textarea>
+</div>
+
+<div class="">
+  <label for "names">Message:</label>
+  <textarea style ="width : 500px;" id="names" rows="8" name = "body" value=""> </textarea>
+</div>
+
+<div class="">
+  <input type = "submit" value="Send Email">
+</div>
+</form>
+<br>
+<hr>
+<br>
+Password is <%= session[:password] %>
+<% if @result %>
+<div style="width: 500px;height:100px;background-color:yellow;"><%= @result %></div>
+<% end %>
